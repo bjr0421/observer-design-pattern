@@ -17,14 +17,14 @@ public class Golfer implements Subject {
         observers.remove(observer);
     }
 
-    public void notifyObserver(int strokes, int par) {
+    public void notifyObservers(int strokes, int par) {
         for (Observer observer : observers) {
-            //observer.update(strokes, par);    TODO remove comment after implementing update functionality
+            observer.update(strokes, par);
         }
     }
 
     public void enterScore(int strokes, int par) {
-        //TODO add functionality
+        notifyObservers(strokes,par);
     }
 
     public String getName() {
