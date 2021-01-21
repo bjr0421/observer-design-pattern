@@ -33,16 +33,16 @@ public class HoleScoreDisplay implements Observer {
     public void displayCurrentScore() {
         int counter = 0;
 
-        System.out.println("Current hole stats: " + "\nPar: " + this.par + "\nStrokes: " + this.strokes);
-        
+        System.out.println("\nCurrent hole stats: " + "\nPar: " + this.par + "\nStrokes: " + this.strokes);
+
         if (this.strokes > this.par) {
             counter = this.strokes - this.par;
-            System.out.println(counter + " over par\n");
+            System.out.println(counter + " over par");
         } else if (this.strokes < this.par) {
             counter = this.par - this.strokes;
-            System.out.println(counter + " under par\n");
+            System.out.println(counter + " under par");
         } else {
-            System.out.println("Made par\n");
+            System.out.println("Made par");
         }
     }
 }
